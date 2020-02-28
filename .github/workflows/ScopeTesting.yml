@@ -9,6 +9,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Copy files needed for tests
+      run: |
+        cp -R Tests/CarthageKitTests/Resources ./.build/debug/CarthagePackageTests.xctest/Contents
+        cp Tests/CarthageKitTests/fixtures/CartfilePrivateOnly.zip ./.build/debug/CarthagePackageTests.xctest/Contents/Resources
+        script/copy-fixtures ./.build/debug/CarthagePackageTests.xctest/Contents/Resources
     - name: Testing for macOS
       uses: undefinedlabs/scope-for-swift-action@v1
       with: 
