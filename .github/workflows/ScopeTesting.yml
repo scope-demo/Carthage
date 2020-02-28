@@ -21,3 +21,4 @@ jobs:
         dsn: ${{ secrets.SCOPE_DSN }}
         platform: macos
         codePath: true
+        forceSPM: true
