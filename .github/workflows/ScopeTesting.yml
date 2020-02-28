@@ -11,6 +11,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Copy files needed for tests
       run: |
+        swift build --build-tests -Xswiftc -suppress-warnings
         cp -R Tests/CarthageKitTests/Resources ./.build/debug/CarthagePackageTests.xctest/Contents
         cp Tests/CarthageKitTests/fixtures/CartfilePrivateOnly.zip ./.build/debug/CarthagePackageTests.xctest/Contents/Resources
         script/copy-fixtures ./.build/debug/CarthagePackageTests.xctest/Contents/Resources
