@@ -22,3 +22,5 @@ jobs:
         platform: macos
         codePath: true
         forceSPM: true
+      env:
+        SCOPE_RUNNER_ENABLED: YES
