@@ -24,5 +24,6 @@ jobs:
         forceSPM: true
       env:
         SCOPE_RUNNER_ENABLED: YES
+        SCOPE_DEBUG_MODE: YES
 
 
